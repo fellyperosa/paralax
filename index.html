@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="website icon" type="png"  href="img/icone.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">INICIO</a></li>
+            <li><a href="#">SOBRE</a></li>
+            <li><a href="#">TRABALHO</a></li>
+            <li><a href="#">CONTATO</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="https://drive.google.com/uc?export=view&id=1nHl2PZEhjGl18XyZYWnWloFciszXvpXh" id="estrelas">
+        <img src="https://drive.google.com/uc?export=view&id=11ywlLc0-vbBwuKFVfTX7stDFih0TBiJG" id="lua">
+        <img src="https://drive.google.com/uc?export=view&id=1A8KUta55RJbL-47_J1_J8L2EVJnzWUJv" id="montanha_behind">
+        <img src="https://drive.google.com/uc?export=view&id=1sc056mKgpKjv7rBiop8QbPPtF7b8pwtu" id="montanha_front">
+        <a href="#sec" id="btn">SOBRE</a>
+        <h2 id="text">Bem Vindo</h2>
+    </section>
+    <div class="sec" id="sec">
+        <h2>Sobre o efeito Parallax</h2>
+        <p> 
+            Aqui eu coloco qualquer coisa para dar uma aumentada na index
+            e ter alguma informação que seja interessante de adicionar
+            para a leitura e informação do usuario, é interessante também colocar os texto
+             em uma posição que fique bem disposto e visivel nao primeira interface
+              e vosualização do usuario
+              <br></br>
+              Ecom uma quebra de linha simples consigo adicionar mais textos, sem que fique
+               muito junto um do outro. De maneira disposta e clara. 
+               <br></br>
+               O campo de texto é uma das ferramentas mais importantes na construção de
+                interfaces de usuário para sites. Ele permite aos usuários inserir informações
+                 em um site, seja para pesquisar por conteúdo ou para preencher formulários de
+                  cadastro. A maneira como o campo de texto é projetado e implementado pode 
+                  afetar a facilidade de uso e a eficácia do site.
+                   Portanto, é importante otimizar sua interface de usuário para garantir 
+                   que o campo de texto seja fácil de usar e compreender.
+                <br></br>
+                Uma interface de usuário bem projetada deve fornecer aos usuários informações 
+                úteis para que possam entender como usar o campo de texto e quais informações 
+                devem ser inseridas. Por exemplo, um site de comércio eletrônico deve fornecer 
+                instruções claras sobre como os usuários devem inserir informações de pagamento 
+                e envio. Além disso, um bom design deve incluir indicações visuais, como espaços 
+                reservados ou rótulos, para orientar os usuários.
+                <br></br>
+                Outro aspecto importante da interface de usuário é a capacidade de resposta. 
+                Um campo de texto bem projetado deve ser rápido e eficiente, para que os usuários 
+                possam inserir informações sem atrasos ou interrupções. Isso é particularmente 
+                importante para dispositivos móveis, onde a velocidade de digitação pode ser 
+                afetada pela interface do usuário.
+                <br></br>
+                Por fim, a acessibilidade também é uma consideração importante ao projetar 
+                um campo de texto. A interface deve ser projetada para ser utilizada por pessoas 
+                com deficiência visual ou outras limitações físicas. Isso pode incluir o uso de 
+                texto alternativo para usuários com deficiência visual e teclas de atalho para 
+                ajudar a navegar pelo site com o teclado em vez do mouse.
+            </p>
+    </div>
+    <script>
+        let estrelas = document.getElementById('estrelas');
+        let lua = document.getElementById('lua');
+        let montanha_behind = document.getElementById('montanha_behind');
+        let montanha_front = document.getElementById('montanha_front');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');    
+        let header = document.querySelector('header');
+        
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            estrelas.style.left = value * 0.25 + 'px';
+            lua.style.top = value * 1.5 + 'px';
+            montanha_behind.style.top = value * 0.5 + 'px';
+            montanha_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
